@@ -1,1 +1,1 @@
-siema pierzu
+from tkinter import *
