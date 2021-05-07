@@ -1,5 +1,7 @@
 
 from tkinter import *
+from tkinter import messagebox
+from tkinter import Tk
 
 
 
@@ -23,10 +25,10 @@ def szyfruj(txt):
     return 0"""
 
 
-okno = Tk()
 
-def printowanie_teksta():
-    print('Gumis to fajny mis!')
+okno = Tk()
+okno.geometry("300x300")
+
 
 
 
@@ -35,19 +37,30 @@ topFrame.pack()
 bottomFrame = Frame(okno)
 bottomFrame.pack(side = BOTTOM)
 
-slowo = ''
-etykieta = Label(topFrame, text = 'Podaj słowo')
-entry1 = Entry(okno, textvariable = slowo)
-
-przycisk1 = Button(bottomFrame, text = 'guzik', command = szyfruj(slowo))
-
-przycisk3 = Button(bottomFrame, text = slowo)
-etykieta2 = Label(topFrame, textvariable = slowo)
-etykieta.pack(side = LEFT)
+entry1 = Entry(okno)
 entry1.pack(side = TOP)
-etykieta2.pack(side = BOTTOM)
+
+def labelka():
+    mylable = Label(okno, text=szyfruj(entry1.get()))
+    mylable.pack()
+
+
+podaj_slowo = Label(topFrame, text = 'Podaj słowo')
+
+
+przycisk1 = Button(bottomFrame, text = 'guzik', command = labelka)
+przycisk2 = Button(bottomFrame, text = 'test', command = szyfruj('morda'))
+
+
+
+
+podaj_slowo.pack(side = LEFT)
+
+przycisk2.pack(side = LEFT)
 przycisk1.pack(side = TOP)
-przycisk3.pack(side = BOTTOM)
+
+
+
 
 
 okno.mainloop()
