@@ -52,7 +52,7 @@ okno = Tk()
 okno.geometry("300x300")
 okno.title("Lockify")
 okno.iconphoto
-
+x= 1
 # tworzenie podzialu
 
 topFrame = Frame(okno)
