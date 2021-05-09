@@ -51,6 +51,7 @@ def deszyfruj_base64(txt):
 okno = Tk()
 okno.geometry("300x300")
 okno.title("Lockify")
+okno.iconphoto
 
 # tworzenie podzialu
 
